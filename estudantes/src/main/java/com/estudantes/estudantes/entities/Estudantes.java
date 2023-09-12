@@ -17,16 +17,16 @@ public class Estudantes implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 1024, nullable = false, name = "product_name")
+    @Column(length = 1024, nullable = false, name = "estudante_name")
     private String name;
 
-    @Column(length = 1024, nullable = false, name = "product_email")
+    @Column(length = 1024, nullable = false, name = "estudante_email")
     private String email;
 
-    @Column(length = 1024, nullable = false, name = "product_course")
-    private String course;
+    @Column(length = 1024, nullable = false, name = "estudante_curso")
+    private String curso;
 
-    @Column(length = 1024, nullable = false, name = "product_telefone")
+    @Column(length = 1024, nullable = false, name = "estudante_telefone")
     private String telefone;
 
     public Long getId() {
@@ -53,12 +53,12 @@ public class Estudantes implements Serializable{
         this.email = email;
     }
 
-    public String getCourse() {
-        return course;
+    public String getCurso() {
+        return curso;
     }
 
-    public void setCourse(String course) {
-        this.course = course;
+    public void setCurso(String curso) {
+        this.curso = curso;
     }
 
     public String getTelefone() {

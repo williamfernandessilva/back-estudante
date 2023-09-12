@@ -13,7 +13,7 @@ public class EstudantesMapper {
         Estudantes estudantes = new Estudantes();
         estudantes.setName(request.name());
         estudantes.setEmail(request.email());
-        estudantes.setCourse(request.course());
+        estudantes.setCurso(request.curso());
         estudantes.setTelefone(request.telefone());
         return estudantes;
     }
@@ -22,7 +22,7 @@ public class EstudantesMapper {
         return new EstudanteResponse(estudantes.getId(), 
                             estudantes.getName(),
                             estudantes.getEmail(),
-                            estudantes.getCourse(),
+                            estudantes.getCurso(),
                             estudantes.getTelefone());
     }
 

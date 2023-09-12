@@ -25,7 +25,7 @@ public class EstudantesService {
 
     public Estudantes getEstudante(long id){
         return this.repository.findById(id).orElseThrow(
-                                                () -> new EntityNotFoundException("Estudante not found")
+                                                () -> new EntityNotFoundException("Student not found")
 
                                                 
                                             );
@@ -36,7 +36,7 @@ public class EstudantesService {
             this.repository.deleteById(id);
         }
         else{
-            throw new EntityNotFoundException("Estudante not found");
+            throw new EntityNotFoundException("Student not found");
         }
     }
 
@@ -51,12 +51,12 @@ public class EstudantesService {
             var updateEstudantes = this.repository.getReferenceById(id);
             updateEstudantes.setName(estudantes.getName());
             updateEstudantes.setEmail(estudantes.getEmail());
-            updateEstudantes.setCourse(estudantes.getCourse());
+            updateEstudantes.setCurso(estudantes.getCurso());
             updateEstudantes.setTelefone(estudantes.getTelefone());
             this.repository.save(updateEstudantes);
         }
         catch(EntityNotFoundException e){
-            throw new EntityNotFoundException("Estudante not found");
+            throw new EntityNotFoundException("Student not found");
         }
         
     }
